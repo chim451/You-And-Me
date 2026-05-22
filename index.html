@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>Chim & Eli</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- LOCK -->
+<div id="lock">
+    <div class="box">
+        <h2>🔒</h2>
+        <input id="pwd" type="password" placeholder="Mot de passe">
+        <button onclick="check()">Entrer</button>
+    </div>
+</div>
+
+<!-- APP -->
+<div id="app" class="hidden">
+
+<!-- 🌸 DECOR SVG -->
+<div class="decor">
+
+<!-- SUN / MOON -->
+<svg class="sunmoon" viewBox="0 0 200 100">
+    <circle cx="70" cy="50" r="35" fill="#FFD56B"/>
+    <text x="55" y="55" font-size="14" fill="#fff">Eli</text>
+
+    <path d="M120,50 a25,25 0 1,1 40,0 a18,18 0 1,0 -40,0" fill="#eee"/>
+    <text x="135" y="55" font-size="14" fill="#444">Chim</text>
+</svg>
+
+<!-- TREE + BIRDS -->
+<svg class="tree" viewBox="0 0 200 200">
+    <path d="M100 180 Q120 100 90 60 Q150 80 130 30"
+          stroke="#ff9ecf" stroke-width="5" fill="none"/>
+
+    <circle cx="120" cy="70" r="8" fill="#fff"/>
+    <circle cx="135" cy="75" r="8" fill="#fff"/>
+</svg>
+
+<!-- RABBIT -->
+<svg class="rabbit" viewBox="0 0 100 100">
+    <ellipse cx="50" cy="60" rx="25" ry="20" fill="#fff"/>
+    <circle cx="45" cy="40" r="10" fill="#fff"/>
+    <circle cx="55" cy="40" r="10" fill="#fff"/>
+    <path d="M40 65 Q50 75 60 65" stroke="#ff9ecf" fill="none"/>
+</svg>
+
+<!-- CAT -->
+<svg class="cat" viewBox="0 0 100 100">
+    <circle cx="50" cy="60" r="22" fill="#ffb6d9"/>
+    <path d="M30 40 L40 20 L50 40" fill="#ffb6d9"/>
+    <path d="M70 40 L60 20 L50 40" fill="#ffb6d9"/>
+</svg>
+
+</div>
+
+<!-- MENU -->
+<div class="grid">
+
+<div class="card" onclick="openVoice()">Voice</div>
+
+<div class="card" onclick="openMemory()">Memory
+<input type="file" multiple onchange="addMedia(event)">
+</div>
+
+<div class="card" onclick="openEli()">Eli</div>
+
+</div>
+
+</div>
+
+<!-- MODAL -->
+<div id="modal">
+<div id="content"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
