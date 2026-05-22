@@ -1,0 +1,70 @@
+body{
+margin:0;
+font-family: -apple-system;
+background: linear-gradient(90deg,#ffd6e8,#fff,#ffd6e8);
+}
+
+/* LOCK */
+#lock{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.box{
+background:white;
+padding:20px;
+border-radius:20px;
+text-align:center;
+}
+
+/* APP */
+.hidden{display:none;}
+
+/* GRID */
+.grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+padding:30px;
+}
+
+.card{
+background:white;
+border-radius:20px;
+height:120px;
+display:flex;
+align-items:center;
+justify-content:center;
+position:relative;
+box-shadow:0 10px 20px rgba(255,182,193,0.3);
+}
+
+/* DECOR */
+.decor svg{
+position:absolute;
+}
+
+.sunmoon{top:10px;left:10px;width:140px;}
+.tree{top:10px;right:10px;width:140px;animation:float 4s infinite;}
+.rabbit{bottom:10px;right:10px;width:90px;}
+.cat{bottom:10px;left:10px;width:90px;}
+
+/* ANIM */
+@keyframes float{
+0%{transform:translateY(0)}
+50%{transform:translateY(10px)}
+100%{transform:translateY(0)}
+}
+
+/* MODAL */
+#modal{
+position:fixed;
+inset:0;
+background:white;
+display:none;
+padding:20px;
+}
+
+#modal.active{display:block;}
