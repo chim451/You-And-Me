@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<title>Eli & Chim</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="apple-touch-icon" href="icon.jpg">
+
+</head>
+
+<body>
+
+<!-- LOGIN -->
+<div id="login">
+  <input type="password" id="password" placeholder="code">
+  <button onclick="login()">OK</button>
+</div>
+
+<!-- APP -->
+<div id="app" class="hidden">
+
+<!-- HOME -->
+<div id="home" class="screen">
+
+  <div class="grid">
+
+    <div class="card" onclick="openApp('voice')">
+      <img src="images/voice.jpg">
+      <p>Voice</p>
+    </div>
+
+    <div class="card" onclick="openApp('memory')">
+      <img src="images/memory.jpg">
+      <p>Memory</p>
+    </div>
+
+    <div class="card" onclick="openApp('eli')">
+      <img src="images/eli.jpg">
+      <p>Eli</p>
+    </div>
+
+  </div>
+</div>
+
+<!-- VOICE -->
+<div id="voice" class="screen hidden">
+  <div class="back" onclick="back()">←</div>
+
+  <div class="voiceGrid">
+
+    <div onclick="play('audio/brave.m4a')" class="voiceCard">Brave</div>
+    <div onclick="play('audio/sad.m4a')" class="voiceCard">Sad</div>
+    <div onclick="play('audio/scared.m4a')" class="voiceCard">Scared</div>
+    <div onclick="play('audio/morning.m4a')" class="voiceCard">Morning</div>
+    <div onclick="play('audio/miss.m4a')" class="voiceCard">Miss you</div>
+    <div onclick="play('audio/night.m4a')" class="voiceCard">Night</div>
+
+  </div>
+</div>
+
+<!-- MEMORY -->
+<div id="memory" class="screen hidden">
+  <div class="back" onclick="back()">←</div>
+
+  <div class="gallery">
+
+    <!-- images/videos générés automatiquement -->
+    <img src="memory/1.jpg">
+    <img src="memory/2.jpg">
+    <video src="memory/1.mp4"></video>
+
+  </div>
+</div>
+
+<!-- ELI -->
+<div id="eli" class="screen hidden">
+  <div class="back" onclick="back()">←</div>
+
+  <div class="videoBox">
+    <iframe 
+      src="https://www.youtube.com/embed/c_NpIfy_c6M"
+      allowfullscreen>
+    </iframe>
+  </div>
+</div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
