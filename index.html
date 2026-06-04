@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<title>Eli & Chim</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="apple-touch-icon" href="icon.jpg">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+</head>
+
+<body>
+
+<!-- 🌸 BACKGROUND SVG -->
+<div class="bg">
+
+<!-- 🌞 SUN + 🌙 MOON -->
+<svg class="sunmoon" viewBox="0 0 200 200">
+  <circle cx="60" cy="60" r="40" fill="#FFD36E"/>
+  <path d="M95 60 A25 25 0 1 0 95 61" fill="#fff3" />
+</svg>
+
+<!-- 🌳 TREE + BIRDS -->
+<svg class="tree" viewBox="0 0 200 200">
+  <rect x="90" y="80" width="20" height="80" fill="#8B5A2B"/>
+  <circle cx="100" cy="70" r="30" fill="#7BD389"/>
+  <circle cx="80" cy="50" r="25" fill="#7BD389"/>
+  <circle cx="120" cy="50" r="25" fill="#7BD389"/>
+
+  <!-- birds -->
+  <path d="M140 40 q10 -10 20 0 q-10 10 -20 0" fill="#333"/>
+  <path d="M160 45 q10 -10 20 0 q-10 10 -20 0" fill="#333"/>
+</svg>
+
+<!-- 🐰 RABBIT -->
+<svg class="rabbit" viewBox="0 0 200 200">
+  <ellipse cx="100" cy="120" rx="40" ry="50" fill="#fff"/>
+  <circle cx="100" cy="80" r="25" fill="#fff"/>
+  <ellipse cx="85" cy="60" rx="8" ry="25" fill="#fff"/>
+  <ellipse cx="115" cy="60" rx="8" ry="25" fill="#fff"/>
+</svg>
+
+<!-- 🐱 CAT -->
+<svg class="cat" viewBox="0 0 200 200">
+  <circle cx="100" cy="120" r="30" fill="#ffb6c1"/>
+  <polygon points="80,100 90,80 100,100" fill="#ffb6c1"/>
+  <polygon points="120,100 110,80 100,100" fill="#ffb6c1"/>
+</svg>
+
+</div>
+
+<!-- 🔑 LOGIN -->
+<div id="login">
+  <div class="loginBox">
+    <input type="password" id="password" placeholder="mot de passe">
+    <button onclick="checkPassword()">Entrer</button>
+  </div>
+</div>
+
+<!-- 🏠 APP -->
+<div id="app" class="hidden">
+
+<!-- HOME -->
+<div id="home" class="screen">
+
+  <div class="grid">
+
+    <div class="card" onclick="openVoice()">
+      <img src="images/voice.jpg">
+      <p>Voice</p>
+    </div>
+
+    <div class="card" onclick="openMemory()">
+      <img src="images/memory.JPG">
+      <p>Memory</p>
+    </div>
+
+    <div class="card" onclick="openEli()">
+      <img src="images/eli.JPG">
+      <p>Eli</p>
+    </div>
+
+  </div>
+
+</div>
+
+<!-- VOICE -->
+<div id="voice" class="screen hidden">
+
+  <div class="back" onclick="backHome()">←</div>
+
+  <div class="voiceGrid">
+
+    <div class="voiceCard" onclick="play('audio/goodmorning.m4a')">Good morning</div>
+    <div class="voiceCard" onclick="play('audio/missyou.m4a')">Miss you</div>
+    <div class="voiceCard" onclick="play('audio/brave.m4a')">Brave</div>
+    <div class="voiceCard" onclick="play('audio/sad.m4a')">Sad</div>
+    <div class="voiceCard" onclick="play('audio/scared.m4a')">Scared</div>
+    <div class="voiceCard" onclick="play('audio/goodnight.m4a')">Good night</div>
+
+  </div>
+</div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
